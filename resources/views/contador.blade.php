@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US" class="no-js" >
 <!-- start -->
@@ -11,13 +12,13 @@
     <link rel="icon" type="image/png" href="http://barber.premiumcoding.com/wp-content/uploads/2015/02/barber-favicon.png">
     <link rel="alternate" type="application/atom+xml" title="Barber Premium Wordpress Theme Atom Feed" href="http://barber.premiumcoding.com/feed/atom/" />
         
-    <title>Galería</title>
+    <title>Contador</title>
 <link rel='dns-prefetch' href='//use.fontawesome.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="Barber Premium Wordpress Theme &raquo; Feed" href="http://barber.premiumcoding.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Barber Premium Wordpress Theme &raquo; Comments Feed" href="http://barber.premiumcoding.com/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Barber Premium Wordpress Theme &raquo; Gallery of Styles Comments Feed" href="http://barber.premiumcoding.com/gallery-of-styles/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Barber Premium Wordpress Theme &raquo; Shortcodes: Count Blocks Comments Feed" href="http://barber.premiumcoding.com/shortcodes-count-blocks/feed/" />
         <script type="text/javascript">
             window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/barber.premiumcoding.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.3"}};
             !function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -36,8 +37,8 @@ img.emoji {
     padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='aqpb-view-css-css'  href='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/css/aqpb-view.css?ver=1487883038' type='text/css' media='all' />
-<link rel='stylesheet' id='custom-theme-css'  href='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/css/custom-theme.css?ver=1487883038' type='text/css' media='all' />
+<link rel='stylesheet' id='aqpb-view-css-css'  href='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/css/aqpb-view.css?ver=1487883062' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-theme-css'  href='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/css/custom-theme.css?ver=1487883062' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='http://barber.premiumcoding.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5.1' type='text/css' media='all' />
 <link rel='stylesheet' id='pmc_charts-css-css'  href='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/css/jquery.easy-pie-chart.css?ver=4.6.3' type='text/css' media='all' />
 <link rel='stylesheet' id='rs-plugin-settings-css'  href='http://barber.premiumcoding.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=4.6.3' type='text/css' media='all' />
@@ -64,7 +65,7 @@ body {
     font-weight: normal;
     line-height: 1.8em;
 }
-::selection { background: #f7b846; color:#fff; text-shadow: none; }
+::selection { background: #f7b846 ; color:#fff; text-shadow: none; }
 h1,h2,h3,h4,h5,h6, .blogpostcategory .posted-date p, .team .title, .term-description p, .titleBottom, .about-us-block-left-title, .about-us-block-right-title,
 .team .title{
     font-family: Oswald !important;
@@ -111,8 +112,8 @@ h6 {
 h2.title a {color:#333;}
 a, a:active, a:visited, .footer_widget .widget_links ul li a{color: #111;}  
 .widget_nav_menu ul li a  {color: #111;}
-a:hover, h2.title a:hover, .item3 h3:hover,  .item3 h3 a:hover, #portitems2 h3 a:hover {color: #f7b846;}
-.product-remove a:hover {color: #f7b846 !important;}
+a:hover, h2.title a:hover, .item3 h3:hover,  .item3 h3 a:hover, #portitems2 h3 a:hover {color: #f7b846 ;}
+.product-remove a:hover {color: #f7b846  !important;}
 
 
 
@@ -130,10 +131,10 @@ a:hover, span, .one_fourth h3:hover, .homerecent .productR .recentCart a:hover, 
  .author span, .team .description a, .support-widget .fa-chevron-down:hover, .price-price
 
 {
-    color:#f7b846;
+    color:#f7b846 ;
 }
 #headerwrap.pmc_menu_transparent > li a.important_color, .menu > li a:hover,.current-menu-item > a,.current-menu-parent a, .pmc-simple-button a:hover,.pmc-simple-button:hover, h2.trigger.active, h2.trigger:hover, .toggle_container a 
-{color:#f7b846 !important;}
+{color:#f7b846  !important;}
 .mainmenu .menu .submenu li.current-menu-item a,.fixedmenu .menu .submenu li.current-menu-item a {color:#222 !important;}
 
 .current-menu-item li > a, .current-menu-parent .sub-menu a{color:#fff !important;}
@@ -169,19 +170,19 @@ a.button:hover, input.button, button.button, .place-order .button, .aq-pricetabl
 .ezscm-browse .alignleft,.ezscm-details-element input.callbackhour, .team .social a:hover, .pagecontentContent-title h1:after, li.ui-state-active:before, li.ui-state-default:hover:before, .accordion.ui-accordion h3:hover i,
 .widget_tag_cloud a
   {
-    background:#f7b846;
+    background:#f7b846  ;
 }
 .accordion .ui-state-default:hover, .ui-widget-header .ui-state-default:hover, .accordion .ui-state-active, .ui-state-hover, 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .catlinkhover,.widget_product_tag_cloud a:hover,.bottom-support-tab h3:hover, .support-widget input[type="submit"],
 .ezscm-container input[type="submit"]
-{background:#f7b846 !important;}
+{background:#f7b846  !important;}
 
-.blogpost .datecomment .link a:hover, .aq-posts-block .post-icon, .singledefult .post-icon:after, .blogpostcategory .post-icon:after {background:#f7b846}
+.blogpost .datecomment .link a:hover, .aq-posts-block .post-icon, .singledefult .post-icon:after, .blogpostcategory .post-icon:after {background:#f7b846 }
 
 /* JUST BACKGROUND COLOR */
 .bx-next:hover, .bx-prev:hover, .gototop,.postcontent.port .blogsingleimage .nextbutton.port, .postcontent.port .blogsingleimage .prevbutton.port,
 mark, .homerecent.SP .bx-next:hover, .homerecent.SP .bx-prev:hover{
-    background-color:#f7b846 ;
+    background-color:#f7b846  ;
 }
 
 /* TRANSPARENT BACKGROUND COLOR */
@@ -193,17 +194,17 @@ mark, .homerecent.SP .bx-next:hover, .homerecent.SP .bx-prev:hover{
 
 
 
-.pmc-count:hover .pmc-count-number-border {width:100px;background:#f7b846;}
-.pmc-count-simple .pmc-count-number-border {background:#f7b846;}
-.pmc-icon:hover .pmc-icon-border, .pmc-icon-simple .pmc-icon-border {width:120px;background:#f7b846;}
-.one_fifth.categories {border-bottom:2px solid#f7b846;}
+.pmc-count:hover .pmc-count-number-border {width:100px;background:#f7b846 ;}
+.pmc-count-simple .pmc-count-number-border {background:#f7b846 ;}
+.pmc-icon:hover .pmc-icon-border, .pmc-icon-simple .pmc-icon-border {width:120px;background:#f7b846 ;}
+.one_fifth.categories {border-bottom:2px solid#f7b846 ;}
 
-.gototop {border-bottom:4px solid#f7b846;}
+.gototop {border-bottom:4px solid#f7b846 ;}
 .rightContentSP .single_add_to_cart_button:hover, .catlinkhover {}
-.pmc-simple-button:hover {border:2px solid #f7b846 !important;}
-.pmc-quote:hover {border-left:4px solid #f7b846 !important;}
+.pmc-simple-button:hover {border:2px solid #f7b846  !important;}
+.pmc-quote:hover {border-left:4px solid #f7b846  !important;}
 
-.team .title {border-bottom:1px solid#f7b846;}
+.team .title {border-bottom:1px solid#f7b846 ;}
 
 
 
@@ -217,7 +218,7 @@ mark, .homerecent.SP .bx-next:hover, .homerecent.SP .bx-prev:hover{
 #headerwrap {height:px !important;}
 #logo {margin-top:px;}
 #header ul.menu > li > a {padding-top:px;}
-.menu ul li a:before, .menu .pmcbig ul.sub-menu li li a:before {border: 2px solid #f7b846;}
+.menu ul li a:before, .menu .pmcbig ul.sub-menu li li a:before {border: 2px solid #f7b846 ;}
 #footer .menu a.important_color {border-bottom:none;}
 
 
@@ -631,7 +632,7 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
 </style>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/rainyday.js?ver=1487883038'></script>
+<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/rainyday.js?ver=1487883062'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/circles.js?ver=4.6.3'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?ver=4.6.3'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=4.6.3'></script>
@@ -641,11 +642,11 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://barber.premiumcoding.com/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 4.6.3" />
 <link rel="canonical" href="http://gesteticaybarberia.com" />
-<link rel='shortlink' href='http://barber.premiumcoding.com/?p=7694' />
-<link rel="alternate" type="application/json+oembed" href="http://barber.premiumcoding.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbarber.premiumcoding.com%2Fgallery-of-styles%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://barber.premiumcoding.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbarber.premiumcoding.com%2Fgallery-of-styles%2F&#038;format=xml" />
-<script type="text/javascript" src="http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/audio-player.js"></script><script type="text/javascript">AudioPlayer.setup("http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/player.swf", {width: 800,animation:"no", bg:"2a2b2c",leftbg:"1e1e20", rightbg:"1e1e20", volslider:"f7b846", voltrack:"ffffff", lefticon:"ffffff",righticon:"ffffff",skip:"ffffff", loader:"f7b846 ",
-         righticonhover:"ffffff", rightbghover:"f7b846", text:"1e1e20", border:"1e1e20"});</script>     <script type="text/javascript">
+<link rel='shortlink' href='http://barber.premiumcoding.com/?p=8268' />
+<link rel="alternate" type="application/json+oembed" href="http://barber.premiumcoding.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbarber.premiumcoding.com%2Fshortcodes-count-blocks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://barber.premiumcoding.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbarber.premiumcoding.com%2Fshortcodes-count-blocks%2F&#038;format=xml" />
+<script type="text/javascript" src="http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/audio-player.js"></script><script type="text/javascript">AudioPlayer.setup("http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/player.swf", {width: 800,animation:"no", bg:"2a2b2c",leftbg:"1e1e20", rightbg:"1e1e20", volslider:"f7b846 ", voltrack:"ffffff", lefticon:"ffffff",righticon:"ffffff",skip:"ffffff", loader:"f7b846 ",
+         righticonhover:"ffffff", rightbghover:"f7b846 ", text:"1e1e20", border:"1e1e20"});</script>        <script type="text/javascript">
             jQuery(document).ready(function() {
                 // CUSTOM AJAX CONTENT LOADING FUNCTION
                 var ajaxRevslider = function(obj) {
@@ -711,7 +712,7 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
         </script>
         </head>     
 <!-- start body -->
-<body class="page page-id-7694 page-template page-template-template-page_builder page-template-template-page_builder-php" >
+<body class="page page-id-8268 page-template-default" >
     <!-- start header -->
             <!-- fixed menu -->     
                 
@@ -720,34 +721,37 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
                 <div class="holder-fixedmenu">                          
                     <div class="logo-fixedmenu">                                
                                                 
-                    <a href="http://gesteticaybarberia.com"><img src="img/LOGO1.png" alt="Gerard Estilistas" ></a>
+                    <a href="www.gesteticaybarberia.com"><img src="img/LOGO1.png" alt="Gerard Estilistas" ></a>
                     </div>                  
                                                 <div class="menu-fixedmenu">
-                        <ul id="menu-single-menu" class="menu"><li id="menu-item-4080-10899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="/">Home</a>
+                        <ul id="menu-single-menu" class="menu"><li id="menu-item-1575-10899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="/">Home</a>
 
 </li>
 
-<li id="menu-item-2433-10570" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children"><a  href="galeria">Galería</a>
+<li id="menu-item-8741-10570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a  href="galeria">Galería</a>
 <ul class="sub-menu">
-    <li id="menu-item-4661-10596" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7694 current_page_item"><a  href="galeriamujeres.html">Mujeres</a></li>
-    <li id="menu-item-3688-10616" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriahombres.html">Hombres</a></li>
+    <li id="menu-item-4366-10596" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriamujeres.html">Mujeres</a></li>
+    <li id="menu-item-7957-10616" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriahombres.html">Hombres</a></li>
 
 </ul>
 </li>
+<li id="menu-item-7227-10877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="staff">Staff</a>
 
-<li id="menu-item-3526-10877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="staff">Staff</a>
-    
-<li id="menu-item-294-10947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="servicios">Servicios</a>
-
-<li id="menu-item-6325-10428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a  href="contador">Contador</a>
-
-<li id="menu-item-9203-10678" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="contacto">Contacto</a></li>
+</li>
                             
+<li id="menu-item-4746-10947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="servicios">Servicios</a>
+
+</li>
+<li id="menu-item-2347-10428" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children"><a  href="contador">Contador</a>
+
+</li>
+<li id="menu-item-7319-10678" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="contacto">Contacto</a></li>
+
 </ul>   
                     </div>                  
                 </div>  
             </div>
-            <div id="aq-template-wrapper-7843" class="aq-template-wrapper aq_row"><div id="aq-block-7843-1" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-661 #headerwrap{background:#141414 !important;}</style><div  class="mainwrap rand-661      " style="background:#141414 url() 50% 0;background-size:cover;border-top:1px solid #333333;border-bottom:1px solid #333333;padding:0px 0 0px 0;">
+            <div id="aq-template-wrapper-7843" class="aq-template-wrapper aq_row"><div id="aq-block-7843-1" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-316 #headerwrap{background:#141414 !important;}</style><div  class="mainwrap rand-316      " style="background:#141414 url() 50% 0;background-size:cover;border-top:1px solid #333333;border-bottom:1px solid #333333;padding:0px 0 0px 0;">
 <div class="main clearfix ">
 <div class="content fullwidth">
 </div><div id="aq-block-7843-2" class="aq-block aq-block-aq_notification_menu_block aq_span12 aq-first cf">     <div class="top-nav ">
@@ -768,17 +772,16 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
             
                                 <div class="social-notification">
                                                     <a target="_blank" href="https://twitter.com/gerardestilista"><i class="fa fa-twitter"></i></a>     
-                                                    <a target="_blank" href="https://facebook.com/SAL%C3%93N-Gerard-834650483347486g"><i class="fa fa-facebook"></i></a>        
+                                                    <a target="_blank" href="https://facebook.com/SAL%C3%93N-Gerard-834650483347486"><i class="fa fa-facebook"></i></a>     
                                                     <a target="_blank" href="https://instagram.com/gerardeyb/"><i class="fa fa-instagram"></i></a>      
-                                                    <a target="_blank" href="https://youtube.com/channel/UCHYbJrULl6qCnJbY0fEB21Q"><i class="fa fa-youtube"></i></a>            
-                                                        
+                                                    <a target="_blank" href="https://youtube.com/channel/UCHYbJrULl6qCnJbY0fEB21Q"><i class="fa fa-youtube"></i></a>    
                                     
                     </div>
                         
         </div>
     </div><div id="aq-block-7843-3" class="aq-block aq-block-aq_end_content_block aq_span12 aq-first cf">       </div></div>
 
-                    </div></div><div id="aq-block-7843-4" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-946 #headerwrap{background:#222222 !important;}</style><div  class="mainwrap rand-946    menuindex  " style="background:#222222 url() 50% 0;background-size:cover;border-top:0px solid #fff;border-bottom:0px solid #fff;padding:0px 0 0px 0;">
+                    </div></div><div id="aq-block-7843-4" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-79 #headerwrap{background:#222222 !important;}</style><div  class="mainwrap rand-79    menuindex  " style="background:#222222 url() 50% 0;background-size:cover;border-top:0px solid #fff;border-bottom:0px solid #fff;padding:0px 0 0px 0;">
 <div class="main clearfix ">
 <div class="content fullwidth">
 </div><div id="aq-block-7843-5" class="aq-block aq-block-aq_menu_block aq_span12 aq-first cf">          
@@ -789,7 +792,7 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
             <div id="header">
                     
                 <div id="logo">
-                                        <a href="http://gesteticaybarberia.com"><img src="img/LOGO.png" alt="Gerard Estilistas" /></a>
+                                    <a href="http://gesteticaybarberia.com"><img src="img/LOGO.png" alt="Gerard Estilistas" /></a>
                 </div>
                                 <!-- respoonsive menu main-->
                 <!-- respoonsive menu no scrool bar -->
@@ -797,17 +800,18 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
                     <div class="resp_menu_button"><i class="fa fa-list-ul fa-2x"></i></div>
                     <div class="menu-single-menu-container"><div class="event-type-selector-dropdown"><a  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" href="/"><strong>Home</strong></a><br>
 
-<a  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children" href="galeria"><strong>Galería</strong></a><br>
+<a  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" href="galeria"><strong>Galería</strong></a><br>
 
-<a  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7694 current_page_item" href="galeriamujeres.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-circle"></i>Mujeres</a><br>
-                        
+<a  class="menu-item menu-item-type-post_type menu-item-object-page" href="galeriamujeres.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-circle"></i>Mujeres</a><br>
 <a  class="menu-item menu-item-type-post_type menu-item-object-page" href="galeriahombres.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-circle"></i>Hombres</a><br>
-                        
+
+
+
 <a  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" href="staff"><strong>Staff</strong></a><br>
 
 <a  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" href="servicios"><strong>Servicios</strong></a><br>
 
-<a  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" href="contador"><strong>Contador</strong></a><br>
+<a  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children" href="contador"><strong>Contador</strong></a><br>
 
 <a  class="menu-item menu-item-type-post_type menu-item-object-page" href="contacto"><strong>Contacto</strong></a><br>
 
@@ -815,28 +819,28 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
                 </div>          
                 <!-- main menu -->
                                             <div class="pagenav mainmenu   menu-right  menu-right-float"> 
-                        <ul id="menu-single-menu-2" class="menu"><li id="menu-item-1013-10899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="/">Home</a>
-</li>
+                        <ul id="menu-single-menu-2" class="menu"><li id="menu-item-4913-10899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="/">Home</a>
 
-<li id="menu-item-1120-10570" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children"><a  href="galeria">Galería</a>
+<li id="menu-item-1653-10570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a  href="galeria">Galería</a>
 <ul class="sub-menu">
-    <li id="menu-item-4497-10596" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7694 current_page_item"><a  href="galeriamujeres.html">Mujeres</a></li>
-    
-    <li id="menu-item-2497-10616" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriahombres.html">Hombres</a></li>
+    <li id="menu-item-2471-10596" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriamujeres.html">Mujeres</a></li>
+    <li id="menu-item-1456-10616" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="galeriahombres.html">Hombres</a></li>
+
 </ul>
 </li>
-<li id="menu-item-8822-10877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="staff">Staff</a>
+<li id="menu-item-3803-10877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="staff">Staff</a>
 
 </li>
-<li id="menu-item-9770-10947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="servicios">Servicios</a>
+<li id="menu-item-4569-10947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a  href="servicios">Servicios</a>
 </li>
-<li id="menu-item-4893-10428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a  href="contador">Contador</a>
+
+<li id="menu-item-313-10428" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children"><a  href="contador">Contador</a>
+
 </li>
-                            
-<li id="menu-item-1728-10678" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="contacto">Contacto</a></li>
+<li id="menu-item-5713-10678" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="contacto">Contacto</a></li>
 
 </ul>                                   <div class="pmc-menu-button">
-                        <a href="reservacion.html">Reserva tu cita.</a>
+                        <a href="reservacion.html">Reserva tu cita</a>
                     </div>
                                         
                     </div>          
@@ -847,7 +851,7 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
     </header>                       
     </div><div id="aq-block-7843-6" class="aq-block aq-block-aq_end_content_block aq_span12 aq-first cf">       </div></div>
 
-                    </div></div><div id="aq-block-7843-7" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-857 #headerwrap{background:#fafafa !important;}</style><div  class="mainwrap rand-857      " style="background:#fafafa url() 50% 0;background-size:cover;border-top:5px solid #eeeeee;border-bottom:5px solid #eeeeee;padding:0px 0 0px 0;">
+                    </div></div><div id="aq-block-7843-7" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-260 #headerwrap{background:#fafafa !important;}</style><div  class="mainwrap rand-260      " style="background:#fafafa url() 50% 0;background-size:cover;border-top:5px solid #eeeeee;border-bottom:5px solid #eeeeee;padding:0px 0 0px 0;">
 <div class="main clearfix ">
 <div class="content fullwidth">
 </div><div id="aq-block-7843-8" class="aq-block aq-block-pmc_wp_breadcrumb_block aq_span12 aq-first cf">            <div class = "outerpagewrap">
@@ -856,183 +860,53 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
                     <div class="pagecontent">
                         <div class="pagecontentContent-title">
                                                         
-                                                            <h1>Galería</h1>
+                                                            <h1>Nuestros Números</h1>
                                                             
                         </div>
                         
         
                         <div class="pagecontentContent-breadcrumb">
-                            <p><a href="http://barber.premiumcoding.com">Home</a> &#187; <span>Galería</span></p>
+                            <p><a href="/">Home</a> &#187; <span>Nuestros Números</span></p>
                         </div>
                     </div>
                 </div>
             </div> 
         </div><div id="aq-block-7843-9" class="aq-block aq-block-aq_end_content_block aq_span12 aq-first cf">       </div></div>
 
-                    </div></div></div>      <div class="usercontent">       
-        <div id="aq-template-wrapper-7693" class="aq-template-wrapper aq_row"><div id="aq-block-7693-1" class="aq-block aq-block-aq_clear_block aq_span12 aq-first cf"><div class="cf" style="height:25px; background:#fff"></div></div><div id="aq-block-7693-2" class="aq-block aq-block-aq_portfolio_block aq_span12 aq-first cf">               
-        
-                
-                                                        <div class="homerecent homePort">
-        <div class="homerecentInner default">
-        <div id = "showpost-portfolio">
-            <div class="showpostload"><div class="loading"></div></div>
-            <div class = "closehomeshow-portfolio port closeajax"><i class="fa fa-times"></i></div>
-            <div class="showpostpostcontent"></div>
-        </div>  
-        <div class="portfolio"> 
-            <div id="portitems4">
-                    <div class="one_third item3 Hairstyle Mustaches  " data-category="Hairstyle Mustaches " >                                           
-<div class="recentimage"> <a href = "galeriahombres.html"  title="Niños">
-<div class="overdefult">
-<div class="recentdescription"><h3>Niños</h3>                                                   
-<div class ="border-line"></div>
-<div class="home-portfolio-categories">Cortes.</div>
-
+                    </div></div></div><!-- main content start -->
+<div class="mainwrap">
+    <div class="main clearfix">
+        <div class="content fullwidth">
+            <div class="postcontent">
+                <div class="posttext">
+                                            <div class="usercontent"><div class="break clearfix">&nbsp;</div>
+<div class="one_fourth"></p>
+<p><div class="pmc-count" style="background-color:#fff; color:#2a2b2c"><div class="pmc-count-icon"><i class="fa fa-group"></i></div><div id="number-847" class="pmc-count-number number-animate">100000</div><div class="pmc-count-number-border"></div><div class="pmc-count-text">Clientes felices</div></div></p>
+<p></div>
+<div class="one_fourth"></p>
+<p><div class="pmc-count" style="background-color:#fff; color:#2a2b2c"><div class="pmc-count-icon"><i class="fa fa-scissors"></i></div><div id="number-204" class="pmc-count-number number-animate">25</div><div class="pmc-count-number-border"></div><div class="pmc-count-text">Años de tradición</div></div></p>
+<p></div>
+<div class="one_fourth"></p>
+<p><div class="pmc-count" style="background-color:#fff; color:#2a2b2c"><div class="pmc-count-icon"><i class="fa fa-coffee"></i></div><div id="number-386" class="pmc-count-number number-animate">5000</div><div class="pmc-count-number-border"></div><div class="pmc-count-text">Cafés servidos</div></div></p>
+<p></div>
+<div class="one_fourth last"></p>
+<p><div class="pmc-count" style="background-color:#fff; color:#2a2b2c"><div class="pmc-count-icon"><i class="fa fa-building"></i></div><div id="number-795" class="pmc-count-number number-animate">9125</div><div class="pmc-count-number-border"></div><div class="pmc-count-text">Días de servicio</div></div></p>
+<p></div>
+<p>&nbsp;</p>
+<div class="break clearfix">&nbsp;</div>
+<div class="break clearfix">&nbsp;</div>
 </div>
-</div>  
-</a>
-
-    
-<div class="image"> <a href = "galeriahombres.html"  title="Galería Niños"  >
-<img class="portfolio-home-image" src="img/ni%C3%B1os.png" alt="Niños"  width="393px" height="300px" >  </a>
-</div>
-</div>                              
-            
-<div class="port-meta">
-</div></div>
-
-                
-<div class="one_third item3 Hairstyle Mustaches  " data-category="Hairstyle Mustaches" >    
-<div class="recentimage">
-<a href = "galeriamujeres.html"  title="Mujeres."  ><div class="overdefult">
-<div class="recentdescription"> <h3>Mujeres</h3>                                                    
-<div class ="border-line"></div>
-<div class="home-portfolio-categories">Cortes, tintes, rayitos, maquillaje, etc.</div>
-</div>
-</div>  
-</a>
-<div class="image"><a href = "galeriamujeres.html"  title="Galería Mujeres">
-<img class="portfolio-home-image" src="img/imagen21.png" alt="Simple Robust Style"  width="393px" height="300px" >
-</a>
-                
-</div>
-</div>                              
-<div class="port-meta">
-                
-</div>
-</div>
-
-<div class="one_third item3 Beards Hairstyle Mustaches  " data-category="Beards Hairstyle Mustaches " >                                         
-<div class="recentimage">
-<a href = "galeriahombres.html"  title="Hombres"  >
-<div class="overdefult">
-<div class="recentdescription">
-<h3>Hombres</h3>                                                    
-<div class ="border-line"></div>
-<div class="home-portfolio-categories">Cortes, barbas, etc.</div>
-                                
-</div>
-</div>  
-</a>
-                
-<div class="image">                                                                                                                             <a href = "http://barber.premiumcoding.com/portfolio/elegant-long-beard/"  title="Galería Hombres"  >                                                                                                                                                                                       <img class="portfolio-home-image" src="img/imagen20.png" alt="Galería Hombres"  width="393px" height="300px" >
-                
-                            
-                                        
-</a>
-                                        
-</div>
-</div>                              
-<div class="port-meta"> </div>
-</div>
-</div>
-                                
-                        
-            
-  <script>
-    jQuery(function(){
-      
-      var $container = jQuery('#portitems4');
-      $container.isotope({
-        itemSelector : '.item3'
-              });
-      
-      
-      var $optionSets = jQuery('#remove'),
-          $optionLinks = $optionSets.find('a');
-      $optionLinks.click(function(){
-        var $this = jQuery(this);
-        // don't proceed if already selected
-        if ( $this.hasClass('selected') ) {
-          return false;
-        }
-        var $optionSet = $this.parents('#remove');
-        $optionSet.find('.selected').removeClass('selected');
-        $this.addClass('selected');
-  
-        // make option object dynamically, i.e. { filter: '.my-filter-class' }
-        var options = {},
-            key = $optionSet.attr('data-option-key'),
-            value = $this.attr('data-option-value');
-        // parse 'false' as false boolean
-        value = value === 'false' ? false : value;
-        options[ key ] = value;
-        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-          // changes in layout modes need extra logic
-          changeLayoutMode( $this, options )
-        } else {
-          // otherwise, apply new options
-          $container.isotope( options );
-        }
-        
-        return false;
-      });
-    jQuery(window).on('load', function(){
-        var iframe_height = jQuery('.homePort .image iframe').attr('height');
-        jQuery('.isotope-item img').attr('height','').attr('width',''); 
-        var height = jQuery('.isotope-item img').height();
-        var width = jQuery('.isotope-item img').width();
-        if (jQuery(".isotope-item img").length == 0){
-            jQuery('.isotope-item ').css('height',iframe_height);
-            jQuery('.isotope-item .recentimage').addClass('img');
-        }       
-        if (jQuery(".isotope-item img").length > 0){
-            jQuery('.isotope-item, .homePort .recentimage ').css('height',height);      
-            jQuery('.homePort .image iframe').attr('height',height);
-            jQuery('.homePort .image iframe').attr('width',width);
-        }
-        $container.isotope('reLayout');
-    });
-      
-    jQuery( window ).resize(function() {
-        var height = jQuery('.isotope-item img').height();
-        var width = jQuery('.isotope-item img').width();
-        jQuery('.isotope-item ').css('height',height);
-        var iframe_height = jQuery('.homePort .image iframe').attr('height');
-        jQuery('.isotope-item img').attr('height','');
-        if (jQuery(".isotope-item img").length == 0){
-            jQuery('.isotope-item .recentimage').addClass('img');
-            jQuery('.isotope-item ').css('height',iframe_height);
-        }           
-        if (jQuery(".isotope-item img").length > 0){
-            jQuery('.isotope-item, .homePort .recentimage ').css('height',height);
-            jQuery('.homePort .image iframe').attr('height',height);
-            jQuery('.homePort .image iframe').attr('width',width);  
-        }
-        $container.isotope('reLayout');
-    });   
-    });
-  </script>
-</div><div id="aq-block-7693-3" class="aq-block aq-block-aq_clear_block aq_span12 aq-first cf"><div class="cf" style="height:80px; background:#fff"></div></div></div>  
-                
+                                    </div>
+            </div>
+        </div>
     </div>
-    <div class="totop"><div class="gototop"><div class="arrowgototop"></div></div></div>
+</div>
+<div class="totop"><div class="gototop"><div class="arrowgototop"></div></div></div>
 <!-- footer-->
 
 <footer>
     <div id="footer">
-        <div id="aq-template-wrapper-8848" class="aq-template-wrapper aq_row"><div id="aq-block-8848-1" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-187 #headerwrap{background:#1b1b1b !important;}</style><div  class="mainwrap rand-187      " style="background:#1b1b1b url() 50% 0;background-size:cover;border-top:0px solid #222222;border-bottom:0px solid #222222;padding:0px 0 0px 0;">
+        <div id="aq-template-wrapper-8848" class="aq-template-wrapper aq_row"><div id="aq-block-8848-1" class="aq-block aq-block-aq_start_content_block aq_span12 aq-first cf"><style scoped>.mainwrap.rand-658 #headerwrap{background:#1b1b1b !important;}</style><div  class="mainwrap rand-658      " style="background:#1b1b1b url() 50% 0;background-size:cover;border-top:0px solid #222222;border-bottom:0px solid #222222;padding:0px 0 0px 0;">
 <div class="main clearfix ">
 <div class="content fullwidth">
 </div><div id="aq-block-8848-2" class="aq-block aq-block-aq_clear_block aq_span12 aq-first cf"><div class="cf" style="height:70px; background:#1b1b1b"></div></div><div id="aq-block-8848-3" class="aq-block aq-block-aq_widgets_block aq_span3 aq-first cf">       <script type="text/javascript">
@@ -1054,17 +928,14 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
         });
         </script>
         <div class="block-widget">  
-            <div class="widget APTFIN_by_TAP"><h3>Instagram Feed</h3><!-- Using AlpinePT for Instagram v1.2.7 with JSON--><!-- Request made --><!-- Success using wp_remote_get() and JSON --><!-- Retrieved from transient -->     
-                
-        <div class="textwidget">Checa nuestros mejores momentos.  
+            <div class="widget APTFIN_by_TAP"><h3>Instagram Feed</h3><!-- Using AlpinePT for Instagram v1.2.7 with JSON--><!-- Request made --><!-- Success using wp_remote_get() and JSON --><!-- Retrieved from transient -->     <div class="textwidget">Checa nuestros mejores momentos.  
 </br></br>
         <br>
         <br>
         <br>
 <div class = "pmc-menu-button"><a href ="https://instagram.com/gerardeyb/" target="_blank">Instagram</a></div></div>
-            
-            
-<script type='text/javascript'><!--//--><![CDATA[//><!--        //Check for jQuery
+
+        <script type='text/javascript'><!--//--><![CDATA[//><!--        //Check for jQuery
         // Note: window.jQuery same as typeof jQuery !== 'undefined'
         if( window.jQuery ){
             jQuery(document).ready(function() {
@@ -1129,7 +1000,7 @@ ul.slides-testimonial_2s .testimonial_2-texts i.fa-quote-right:last-child {margi
         });
         </script>
         <div class="block-widget">  
-            <div class="widget widget_text"><h3>Acerca de</h3>          <div class="textwidget">Gerard Estilistas es una barbería y estética que centra sus servicios en darle la mejor experiencia para su imagen personal.
+            <div class="widget widget_text"><h3>ACERCA DE</h3>          <div class="textwidget">Gerard Estilistas es una barbería y estética que centra sus servicios en darle la mejor experiencia para su imagen personal. 
 <br><br>
 
 <i class="fa fa-phone"></i>6 36 85 75<br>
@@ -1160,15 +1031,15 @@ Domingo <span class = "exact-time">09:00 - 20:00</span></br></div></div>
         <div id="footerb">
             <div class="lowerfooter">
             <div class="copyright"> 
-                <div class ="lower-footer-logo">Cuidando de ti <img src = "http://barber.premiumcoding.com/wp-content/uploads/2013/12/barber-footer-icon.png" width="16"> GERARD ESTILISTAS</div>
+                <div class ="lower-footer-logo">GERARD <img src = "http://barber.premiumcoding.com/wp-content/uploads/2013/12/barber-footer-icon.png" width="16"> ESTÉTICA Y BARBERÍA</div>
 
-Gerard Estética y Barbería @2017 por <a href = "http://inovuz.com">inovuz</a>
+Gerard Estética y Barbería @2017 por <a href = "www.inovuz.com">inovuz</a>
             </div>
             </div>
         </div>
     </div>  
     <div class="bottom-support-tab">
-        <div class="support-widget"><h3 class="up">Reserva tu cita.<i class="fa fa-chevron-up"></i><i class="fa fa-chevron-down"></i></h3><div class="support-content">         <div class="textwidget"><div class='ezscm ezscm-schedule-1 ezscm-theme-default' id='ezscm-schedule-1' data-id='1' data-vars='{"browse_next":"Next week","browse_previous":"Previous week","date_format":"MM-DD-YYYY","debug_mode":"1","redirect_url":"","time_format":"HH:mm"}'>    <div class='ezscm-loading'>Cargando</div>   <div class='ezscm-container'>       <div class='ezscm-box'>
+        <div class="support-widget"><h3 class="up">Reserva aquí<i class="fa fa-chevron-up"></i><i class="fa fa-chevron-down"></i></h3><div class="support-content">         <div class="textwidget"><div class='ezscm ezscm-schedule-1 ezscm-theme-default' id='ezscm-schedule-1' data-id='1' data-vars='{"browse_next":"Next week","browse_previous":"Previous week","date_format":"MM-DD-YYYY","debug_mode":"1","redirect_url":"","time_format":"HH:mm"}'>    <div class='ezscm-loading'>Cargando</div>   <div class='ezscm-container'>       <div class='ezscm-box'>
                 <div class='ezscm-browse'>
                     <div class='alignleft inline'>
                         <button class='btn alignleft ezscm-browse-prev' data-action='get_schedule' data-browseweek='2017-02-20'>&lt; Previous week</button>
@@ -1236,8 +1107,8 @@ Gerard Estética y Barbería @2017 por <a href = "http://inovuz.com">inovuz</a>
 <link rel='stylesheet' id='AlpinePhotoTiles_style-css'  href='http://barber.premiumcoding.com/wp-content/plugins/alpine-photo-tile-for-instagram/css/AlpinePhotoTiles_style.css?ver=1.2.7' type='text/css' media='all' />
 <link rel='stylesheet' id='ezscm-theme-default-css'  href='http://barber.premiumcoding.com/wp-content/plugins/ez-schedule-manager/themes/default.css?ver=2.2.0' type='text/css' media='all' />
 <link rel='stylesheet' id='ezscm-css-frontend-css'  href='http://barber.premiumcoding.com/wp-content/plugins/ez-schedule-manager/style-frontend.css?ver=4.6.3' type='text/css' media='all' />
-<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/aqpb-view.js?ver=1487883038'></script>
-<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/pmc_infinity.js?ver=1487883038'></script>
+<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/aqpb-view.js?ver=1487883062'></script>
+<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/pmc_infinity.js?ver=1487883062'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-includes/js/comment-reply.min.js?ver=4.6.3'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript'>
@@ -1262,7 +1133,6 @@ var _wpcf7 = {"loaderUrl":"http:\/\/barber.premiumcoding.com\/wp-content\/plugin
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/themes/barber/js/gistfile_pmc.js?ver=1'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/themes/barber/js/jquery.bxslider.js?ver=1'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-includes/js/wp-embed.min.js?ver=4.6.3'></script>
-<script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/page-builder-pmc/assets/js/jquery.isotope.min.js?ver=1'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/alpine-photo-tile-for-instagram/js/AlpinePhotoTiles_script.js?ver=1.2.7'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/ez-schedule-manager/assets/js/jquery.scrollTo.min.js?ver=4.6.3'></script>
 <script type='text/javascript' src='http://barber.premiumcoding.com/wp-content/plugins/ez-schedule-manager/assets/js/moment.locales.min.js?ver=4.6.3'></script>

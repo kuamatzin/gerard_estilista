@@ -19,10 +19,18 @@ Route::get('/galeria', function () {
     return view('galeria');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/staff', function () {
+    return view('staff');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/servicios', function () {
+    return view('servicios');
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
+Route::get('/contador', function () {
+    return view('contador');
 });
