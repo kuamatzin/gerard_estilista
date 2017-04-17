@@ -1,0 +1,58 @@
+.ezscm-theme-default .schedule-entry {
+  background: #eee;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 3px;
+  overflow: hidden;
+}
+.ezscm-theme-default .entry-free {
+  background: #efefef;
+}
+.ezscm-theme-default .entry-public {
+  background: #f66;
+  color: #000;
+}
+.ezscm-theme-default .entry-blocked {
+  background: #999;
+}
+.ezscm-theme-default .entry-selected {
+  border: #f00 1px solid;
+}
+.ezscm-theme-default .ezscm-browse {
+  display: none;
+  margin-bottom: 50px;
+}
+.ezscm-theme-default .ezscm-browse .btn {
+  display: inline-block;
+}
+.ezscm-theme-default .ezscm-browse .alignleft {
+  float: left;
+}
+.ezscm-theme-default .ezscm-browse .alignright {
+  float: right;
+}
+.ezscm-theme-default .ezscm-details {
+  display: none;
+  margin-top: 2em;
+  text-align: center;
+}
+.ezscm-theme-default .ezscm-form label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+.ezscm-theme-default .ezscm-form input {
+  text-align: center;
+}
+.ezscm-theme-default .ezscm-element {
+  margin: 0.5em auto;
+}
+.ezscm-theme-default .ezscm-required-notification {
+  margin-top: 30px;
+}
+.ezscm-theme-default .ezscm-success-text {
+  display: none;
+}
+.ezscm-theme-default .ezscm-message {
+  text-align: center;
+}

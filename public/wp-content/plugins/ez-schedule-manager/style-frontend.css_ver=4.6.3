@@ -1,0 +1,96 @@
+.ezscm * {
+	box-sizing: border-box;
+}
+
+.ezscm .ezscm-container {
+	display: none;
+}
+
+.ezscm ul li {
+	list-style: none;
+}
+
+.ezscm .ezscm-container .ezscm-details {
+	display: none;
+}
+
+.ezscm .ezscm-loading {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 1.3em;
+}
+
+.ezscm-hidden {
+	visibility: hidden;
+}
+
+/**
+	schedules list
+**/
+.ezscm .ezscm-schedules-list {
+	width: 150px;
+}
+.ezscm .ezscm-schedules-list li.button {
+	width: 125px;
+	margin: 0 0 10px;
+}
+
+/**
+	schedule
+**/
+.ezscm .ezscm-schedule {
+	display: table;
+	text-align: center;
+	white-space: nowrap;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.ezscm .schedule-header {
+	height: 45px;
+	margin: 0 0 10px;
+	text-align: center;
+}
+.ezscm .schedule-day, .ezscm .schedule-times {
+	vertical-align: top;
+	margin-left: 3px;
+	padding-left: 0;
+}
+.ezscm .schedule-day {
+	display: table-cell;
+}
+
+.ezscm .schedule-list-day {
+	display: table-cell;
+}
+.ezscm .schedule-times-responsive {
+	display: none;
+}
+@media (max-width: 840px) {
+	.ezscm .schedule-times, .ezscm .schedule-times-responsive {
+		display: inline-block;
+	}
+	.ezscm .schedule-list-day {
+		display: block;
+	}
+	.ezscm .schedule-times-main {
+		display: none;
+	}
+}
+
+.ezscm .schedule-entry.entry-free:hover:not(.nosubmit) {
+	cursor: pointer;
+}
+.ezscm .schedule-entry span {
+	vertical-align: middle;
+}
+
+.ezscm .entry-small {
+	width: auto;
+	height: 25px;
+	line-height: 25px;
+	margin: 0 0 3px;
+}
+
+.ezscm-clear {
+	clear: both;
+}

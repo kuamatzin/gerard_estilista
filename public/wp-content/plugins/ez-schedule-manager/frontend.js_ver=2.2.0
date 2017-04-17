@@ -1,0 +1,392 @@
+jQuery(document).ready(function($) {
+	$.fx.speeds._default = 150;
+
+	// init vars / events for each form
+	var ezscm_form_vars = [];
+	$(".ezscm").each(function() {
+		var form    = this;
+		var form_id = $(this).data("id");
+		ezscm_form_vars[form_id] = $(this).data("vars");
+	});
+
+	// get public callbacks at start
+	get_callbacks_public();
+	$(".spinner-wrapper").show();
+
+	/**
+		ui events
+	**/
+	// entry selected
+	$("body").on("click touchstart", ".schedule-entry.entry-free:not(.nosubmit)", function() {
+		var schedule         = $(this).parents(".ezscm")[0];
+		var schedule_id      = $(schedule).data("id");
+		var schedule_options = ezscm_form_vars[schedule_id];
+
+		$(".entry-selected").removeClass("entry-selected");
+		$(this).addClass("entry-selected");
+
+		// hide messages
+		$(schedule).find(".ezscm-message").fadeOut();
+
+		// internal data
+		$(schedule).find(".s_id").val($(this).data("s_id"));
+		$(schedule).find(".date_internal").val($(this).data("date"));
+		$(schedule).find(".time_internal").val($(this).data("time"));
+
+		// public date
+		var pubDate = moment($(this).data("date"), "YYYY-MM-DD").format(schedule_options.date_format);
+		var pubTime = moment($(this).data("time"), "HH:mm:ss").format(schedule_options.time_format);
+		$(schedule).find(".callbackdate").val(pubDate);
+		$(schedule).find(".callbackhour").val(pubTime);
+
+		$(schedule).find(".ezscm-details").fadeIn();
+		$.scrollTo($(schedule).find(".ezscm-details"), 800, { offset: -200 });
+	});
+
+	// browse weeks
+	$("[data-action='get_schedule']").on("click touchstart", function() {
+		var target = "#" + $(this).parents(".ezscm").attr("id");
+		var week = $(this).data("browseweek");
+		$(target).find(".ezscm-schedule-wrapper, .ezscm-details").fadeOut();
+
+		get_callbacks_public(week, target);
+	});
+
+	// submit
+	$(".ezscm-form").on("submit", function(e) {
+		$(this).find(".ezscm-loading").show();
+
+		// disable submit button temporarily
+		$(this).find("input[type='submit']").attr("disabled", "disabled");
+
+		var id       = $(this).find(".s_id").val();
+		var data     = "action=submit&id=" + id + "&" + $(this).serialize();
+		var entry    = $(".entry-selected");
+		var schedule = $(this).parents(".ezscm");
+
+		$.ajax({
+			type: "post",
+			url: ezscm_vars.ajaxurl,
+			data: {
+				action: "ezscm_frontend",
+				data: data
+			},
+			success: function(response) {
+				$(schedule).find(".ezscm-loading").hide();
+				$(schedule).find(".ezscm-message").fadeIn();
+
+				// enable submit button
+				$(schedule).find("input[type='submit']").removeAttr("disabled");
+
+				if (!response) {
+					$(schedule).find(".ezscm-message").text("Something went wrong. :(");
+						
+					return false;
+				}
+
+				if (ezscm_form_vars[id].debug_mode == 1) console.log(response);
+
+				response = $.parseJSON(response);
+
+				// error occurred
+				if (response.error) {
+					$(schedule).find(".ezscm-message").html("<p class='text-danger'>" + response.error + "</p>");
+					if (typeof Recaptcha !== "undefined") Recaptcha.reload();
+
+					return false;
+				}
+
+				// prevent spam
+				if (typeof Recaptcha !== "undefined") Recaptcha.reload();
+
+				// success
+				if (response.success) {
+					$(entry).removeClass("entry-free").addClass("entry-public");
+					$(schedule).find(".ezscm-message").text(response.success);
+					$(schedule).find(".ezscm-details").fadeOut();
+
+					// redirect the user
+					if (ezscm_form_vars[id] && ezscm_form_vars[id].redirect_url && ezscm_form_vars[id].redirect_url.length > 0) {
+						window.location.replace(ezscm_form_vars[id].redirect_url);
+					}
+				}
+			}
+		});
+
+		e.preventDefault();
+		return false;
+	});
+
+	function get_callbacks_public(week, target) {
+		$(".spinner").fadeIn();
+		$(target).find(".ezscm-message").fadeOut();
+
+		if (!target) target = ".ezscm";
+
+		$(target).each(function(i, schedule) {
+			var id = $(schedule).find(".s_id").val();
+			
+			var postData = "action=get_public_schedule";
+			postData    += "&id=" + id;
+			postData    += "&add=" + $(schedule).data("add");
+
+			if (week) {
+				postData += "&week=" + week;
+			}
+
+			$.ajax({
+				type: "post",
+				url: ezscm_vars.ajaxurl,
+				data: {
+					action: "ezscm_frontend",
+					data: postData
+				},
+				success: function(response) {
+					if (!response) return false;
+
+					if (ezscm_form_vars[id].debug_mode == 1) console.log(response);
+
+					response = $.parseJSON(response);
+
+					$(schedule).find(".ezscm-loading, .spinner").hide();
+					$(schedule).find(".ezscm-container, .ezscm-schedule-wrapper, .ezscm-browse").fadeIn();
+
+					if (response.options.length < 1) {
+						$(schedule).find(".ezscm-schedule-wrapper").text(ezscm_vars.noid);
+						return false;
+					}
+
+					show_schedule($(schedule), response.entries, response.options, week);
+				}
+			});
+		});
+	}
+
+	// show schedule entries
+	function show_schedule(target, entries, options, week) {
+		// set language
+		moment.locale(options.lang_dates.value);
+
+		// parse blocked times
+		var days = options.days_available.value.split(",");
+
+		var blocked = [];
+		if (!options.time_block) {
+			blocked.push([
+				options.time_block_start.value,
+				options.time_block_end.value
+			]);
+		}
+		else {
+			var tmp_blocked_split = options.time_block.value.split(",");
+			var tmp_blocked_array = [];
+			for (var i in tmp_blocked_split) {
+				tmp_blocked_array.push(tmp_blocked_split[i].split("-"));
+			}
+
+			blocked.push(tmp_blocked_array);
+		}
+
+		if (!week) {
+			week = moment().startOf("isoWeek");
+		}
+		else {
+			week = moment(week, "YYYY-MM-DD");
+		}
+
+		// set internal block times
+		var	block_begin, block_end, block_diff;
+		if (blocked.length > 0) {
+			block_begin = moment(blocked[0], "HH:mm");
+			block_end   = moment(blocked[1], "HH:mm");
+		}
+
+		// closed days
+		var closed_days = $.parseJSON(options.closed_days.value);
+
+		// calculate time steps
+		var
+			tmp_begin = options.time_begin.value.split(":"),
+			tmp_end   = options.time_end.value.split(":"),
+			tmp_steps = options.time_steps.value.split(":");
+
+		var
+			begin_hour   = parseInt(tmp_begin[0]),
+			begin_minute = parseInt(tmp_begin[1]),
+			end_hour     = parseInt(tmp_end[0]),
+			end_minute   = parseInt(tmp_end[1]),
+			step_hour    = parseInt(tmp_steps[0]),
+			step_minute  = parseInt(tmp_steps[1]);
+
+		var
+			tmp_hours   = (end_hour - begin_hour) * 60,
+			tmp_minutes = end_minute - begin_minute;
+
+		var steps = Math.floor((tmp_hours + tmp_minutes) / (step_hour*60 + step_minute));
+		var now   = moment();
+
+		// output
+		var out = "<div class='ezscm-schedule'>";
+		var out_times = "";
+
+		// hours
+		out_times += "<ul class='schedule-day schedule-times schedule-times-main'>";
+		out_times += "	<li class='schedule-header'></li>";
+
+		var tmp_time = moment({ hours: begin_hour, minute: begin_minute });
+		for (var h = 0; h < steps; h++) {
+			out_times += "<li class='entry-small'>";
+			out_times += "	<span>" + tmp_time.format(options.time_format.value) + "</span>";
+			out_times += "</li>";
+
+			tmp_time.add("hours", step_hour).add("minutes", step_minute);
+		}
+		out_times += "</ul>";
+
+		out += out_times;
+
+		// days
+		var days_show = parseInt(options.show_weeks_amount_frontend.value) * 7;
+		for (var d = 0; d < days_show; d++) {
+			var is_first_day = false;
+			var loop_day;
+			var loop_day_calc = d - Math.floor(d / 7) * 7;
+
+			// reset back to day-range (0 to 7)
+			if (d >= 7) {
+				if (!days[loop_day_calc]) continue;
+
+				loop_day = parseInt(days[loop_day_calc]) + d - loop_day_calc;
+				is_first_day = days[loop_day_calc] == days[0];
+			}
+			else {
+				if (!days[d]) continue;
+				if (days[d] == 0) days[d] = 7;
+
+				loop_day = days[d];
+			}
+
+			// add times
+			if (is_first_day) {
+				out += "</div><div class='ezscm-schedule'>";
+				out += out_times;
+			}
+
+			// set loop date
+			var m = moment(week).startOf("isoWeek").isoWeekday(loop_day).hour(begin_hour).minute(begin_minute);
+
+			var currentDateInternal = moment(week, "YYYY-MM-DD").startOf("isoWeek").isoWeekday(loop_day);
+			var currentDate         = currentDateInternal.format("YYYY-MM-DD");
+			var currentDay          = currentDateInternal.format(options.date_format.value);
+			var currentDayName      = moment(week, "YYYY-MM-DD").isoWeekday(loop_day).format("dddd");
+
+			// check if day is closed / blocked
+			var closed_day = false;
+			for (var ci = 0; ci < closed_days.length; ci++) {
+				var closed_day_from = moment(closed_days[ci].from, "YYYY-MM-DD");
+				var closed_day_to   = moment(closed_days[ci].to, "YYYY-MM-DD");
+
+				if ((currentDateInternal.isAfter(closed_day_from) && currentDateInternal.isBefore(closed_day_to)) ||
+					currentDateInternal.isSame(closed_day_from) || currentDateInternal.isSame(closed_day_to)) {
+					closed_day = true;
+				}
+			}
+
+			out += "<div class='schedule-list-day'>";
+
+			// times + responsive times
+			var tmp_time         = moment({ hours: begin_hour, minute: begin_minute });
+
+			out += "<ul class='schedule-day schedule-times schedule-times-responsive'>";
+			out += "	<li class='schedule-header'></li>";
+			for (var h = 0; h < steps; h++) {
+				out += "<li class='entry-small'>";
+				out += "	<span>" + tmp_time.format(options.time_format.value) + "</span>";
+				out += "</li>";
+
+				tmp_time.add("hours", step_hour).add("minutes", step_minute);
+			}
+			out += "</ul>";
+
+			out += "<ul class='schedule-times'>";
+			out += "	<li class='schedule-header'>" + currentDayName + "<br>" + currentDay + "</li>";
+
+			for (var s = 0; s < steps; s++) {
+				var tmp_class;
+				var current_data_time = m.format("HH:mm:ss");
+
+				// if day is closed, just add blocked class
+				if (closed_day) {
+					tmp_class = "entry-blocked";
+				}
+				else {
+					tmp_class                 = "entry-free";
+					var current_time_internal = currentDateInternal.hour(m.hour()).minute(m.minute());
+					var date_min              = moment().add("hours", options.entry_time_ahead.value);
+
+					// check if time is in the past
+					if (current_time_internal.isBefore(now) || current_time_internal.isBefore(date_min)) {
+						tmp_class = "entry-blocked";
+					}
+
+					// fill blocked times
+					for (var b = 0; b < blocked.length; b++) {
+						var block_begin = moment(currentDate + " " + blocked[b][0]);
+						var block_end   = moment(currentDate + " " + blocked[b][1]);
+
+						if ((m.isAfter(block_begin) || m.isSame(block_begin)) && m.isBefore(block_end)) {
+							tmp_class = "entry-blocked";
+							break;
+						}
+					}
+
+					// check if user can submit anything
+					if (options.display_only.value == 1) tmp_class += " nosubmit";
+				}
+
+				out += "<li class='schedule-entry " + tmp_class + "' data-date='" + currentDate + "' data-time='" + current_data_time + "' data-dateformat='" + currentDay + "' data-s_id='" + options.days_available.s_id + "'>";
+				out += "	<span></span>";
+				out += "</li>";			
+
+				m.add("hours", step_hour).add("minutes", step_minute);
+			}
+
+			out += "</ul>";
+			out += "</div>";
+		}
+
+		$(target).find(".ezscm-schedule-wrapper").html(out);
+
+		/**
+			fill public entries
+		**/
+		for (var e = 0; e < entries.length; e++) {
+			var	entryDate      = entries[e].date,
+				entryTimeBegin = entries[e].time_begin;
+
+			var targetEntry = ".schedule-entry[data-date='" + entryDate + "'][data-time='" + entryTimeBegin + "']";
+
+			$(target).find(targetEntry)
+				.removeClass("entry-free")
+				.addClass("entry-public");
+
+			if (entries[e].hasOwnProperty("data")) {
+				$(target).find(targetEntry + " span").text(entries[e].data);
+			}
+		}
+
+		// next / prev week values
+		var week_prev = moment(week).subtract("days", days_show).format("YYYY-MM-DD");
+		var week_next = moment(week).add("days", days_show).format("YYYY-MM-DD");
+		
+		$(target).find(".ezscm-browse-prev").data("browseweek", week_prev);
+		$(target).find(".ezscm-browse-next").data("browseweek", week_next);
+
+		if (moment(week_prev).isBefore(moment().startOf("isoWeek"))) {
+			$(target).find(".ezscm-browse-prev").fadeOut();
+		}
+		else {
+			$(target).find(".ezscm-browse-prev").fadeIn();
+		}
+	}
+});
